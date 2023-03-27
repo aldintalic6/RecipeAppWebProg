@@ -1,10 +1,18 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE, OPTIONS, PATCH');
 require "vendor/autoload.php";      //run autoloader
 
+Flight::register('db', 'PDO', 
+array('mysql:host=localhost;dbname=lab3_db','root','root'));
 
-Flight::route('/', function() {     //define route and define function to handle request
-echo "Hello world!";   
-});
+
+Flight::route('GET /api/users', function(){
+    $users = Flight::db()->query('SELECT * FROM Users', PDO::FETCH_ASSOC)->fetchAll();
+    var_dump($users);
+    Flight::json($users);
+    });
+ 
 
 
 Flight::start();        //start FlightPHP
