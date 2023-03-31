@@ -17,7 +17,7 @@ switch ($type) {
     case 'delete':
 
         $id = $_REQUEST['id'];
-        $dao->deleteData($id);
+        $dao->deleteByID($id);
         break;
 
     case 'update':
@@ -31,11 +31,16 @@ switch ($type) {
 
     case 'get':
 
-        default:                       // If we don't provide any parameter in URL get will execute
+        default:                       // If we don't provide any parameter in URL 'get' will execute
         $results = $dao->getAll();
         print_r($results);
         break;
-        
+
+    case 'getid':
+        $id = $_REQUEST['id'];
+        $results = $dao->getUserByID();
+        print_r($results);
+        break;
 }
 
 ?>
