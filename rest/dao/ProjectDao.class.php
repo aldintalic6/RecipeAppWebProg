@@ -32,21 +32,31 @@ public function getAll() {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-public function insertData($first_name, $last_name, $age) {
+public function getUserByID($id) {
 
-    $stmt = $this->pdo->prepare("INSERT INTO Users (firstName, lastName, age) VALUES (:first_name, :last_name, :age)");
-    $result = $stmt->execute([':first_name' => $first_name, ':last_name' => $last_name, ':age' => $age]);
+    $stmt = $this->pdo->prepare("SELECT * FROM Users WHERE id = :id");
+    $stmt->execute([':id' => $id]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-public function updateData($id, $first_name, $last_name, $age) {
-
-    $stmt = $this->pdo->prepare("UPDATE Users SET firstName = :first_name, lastName = :last_name, age = :age WHERE id = $id");
-    $result = $stmt->execute([':first_name' => $first_name, ':last_name' => $last_name, ':age' => $age]);
+public function insertData($users) {
+    
+    $stmt = $this->pdo->prepare("INSERT INTO Users (firstName, lastName, age) VALUES (:firstName, :lastName, :age)");
+    $stmt->execute($users);
+    $users['id'] = $this->pdo->lastInsertID();
+    return $users;
 }
 
-public function deleteData($id) {
+public function updateData($users, $id) {  
+    $users['id'] = $id;
+    $stmt = $this->pdo->prepare("UPDATE Users SET firstName = :firstName, lastName = :lastName, age = :age WHERE id = :id");
+    $stmt->execute($users);
+    return $users;
+}
 
-    $stmt = $this->pdo->prepare("DELETE from Users WHERE id = :id");
+public function deleteByID($id) {
+
+    $stmt = $this->pdo->prepare("DELETE FROM Users WHERE id = :id");
     $stmt->bindParam(':id', $id);  // Prevents SQL injection
     $stmt->execute();
 }
