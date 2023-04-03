@@ -1,7 +1,7 @@
 <?php
 
-require_once("rest/dao/ProjectDao.class.php");
-$dao = new ProjectDao();
+require_once("rest/dao/UsersDao.class.php");
+$dao = new UsersDao();
 
 $type = $_REQUEST['type'];
 
