@@ -43,15 +43,4 @@ Flight::route("PUT /recipe/@id", function($id) {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
 ?>
