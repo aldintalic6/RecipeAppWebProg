@@ -206,7 +206,15 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-   
+    <main id="spapp" role="main">
+        <section id="about"></section>
+        <section id="contact"></section>
+        <section id="blog-post"><h1>Datatable</h1></section>
+        <section id="elements"><h1>Example 1</h1></section>
+        <section id="receipe-post"><h1>Example 2</h1></section>
+        
+    </main>
+
 
    <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
@@ -221,123 +229,6 @@
     <script src="assets/js/active.js"></script>
     <script src = "assets/js/initial.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 
-    <main id="spapp" role="main">
-        <section id="about"></section>
-        <section id="contact"></section>
-        <section id="blog-post"><h1>Datatable</h1></section>
-        <section id="elements"><h1>Example 1</h1></section>
-        <section id="receipe-post"><h1>Example 2</h1></section>
-        
-    </main>
-
-    <table id = "users">
-        <div class = "spinner-border" role = "status">
-            <span class = "sr-only">Loading...</span>
-        </div>
-    </table>
-    
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="deleteStudentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <input id = "student_id" name = "student_id" hidden/>
-        <div class="modal-body" id = "delete-student-body">
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-danger" onclick = "deleteStudent()">Delete</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</body>
-<script>
-// alert("Hello");
-// hello();
-
-/*
-let list = '<ul>';   
-for (var i = 0; i < cars.length; i++) {
-    list = list +  '<li>' + cars[i] + '</li>';
-}
-list = list + '</ul>';
-document.getElementById("cars").innerHTML = list;
-*/
-
-$("p").click(function() {   // will hide all paragraphs when clicked (jquery)
-  $(this).hide();
-});
-
-
-
-/*
-
- AJAX reuqest to get all users from db
-
-*/ 
-
-    console.log("next")
-
-    getStudents();
-
-    function getStudents() {
-
-   $.get("rest/users", function(data) {
-    var html = "";
-        for (var i = 0; i < data.length; i++) {
-        html = html + "<tr>" + 
-                "<td>" + data[i].firstName + "</td>" + 
-                "<td>" + data[i].lastName + "</td>" +
-                "<td><button class = 'btn btn-info' onclick = 'editStudent("+ data[i].id +")'>Edit Student</button></td>" + 
-                "<td><button class = 'btn btn-danger' onclick = 'openConfirmationDialog("+ data[i].id +")'>Delete Student</button></td>" + 
-                "</tr>";
-        }
-        $("#users").html(html);
-        console.log(data)
-   });
-
-}
-
-   function openConfirmationDialog(id) {
-        $("#deleteStudentModal").modal("show");
-        $("#delete-student-body").html("Do you want to delete student with id = " + id);
-        $("#student_id").val(id);
-   }
-
-   function deleteStudent() {
-    $.ajax({
-        'url': 'rest/user/' + $("#student_id").val(),
-        'type': 'DELETE',
-        success: function(response) {
-            console.log(response);
-            $("#deleteStudentModal").modal('hide');
-            toastr.success(response.message);
-            getStudents();
-            //alert('deleted')
-        },
-        error: function(XMLHttpRequest, textStatus, errorThrow) {
-            console.log("Error: " +  errorThrow);
-        }
-    })
-  }
-
-   function editStudent(id) {
-
-   }
-
-</script>
 </html>

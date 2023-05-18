@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Delicious - Food Blog Template | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="../assets/style.css">  
+
+    <link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet">
+
+    <!-- 
+        styles.css and style.css.map must be in assets, but not in css folder, else it doesn't work (don't know why)
+    -->
+
+    <style>
+        table, tr, td {
+            border: 1.5px solid black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+     <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="img/core-img/salad.png" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="Type any keywords...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-between">
+                    <!-- Breaking News -->
+                    <div class="col-12 col-sm-6">
+                        <div class="breaking-news">
+                            <div id="breakingNewsTicker" class="ticker">
+                                <ul>
+                                    <li><a href="#">Hello World!</a></li>
+                                    <li><a href="#">Welcome to Colorlib Family.</a></li>
+                                    <li><a href="#">Hello Delicious!</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Social Info -->
+                    <div class="col-12 col-sm-6">
+                        <div class="top-social-info text-right">
+                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="../index.html"><img src="../assets/img/core-img/logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li class="active"><a href="../index.html">Home</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="../index.html">Home</a></li>
+                                            <li><a href="tpl/about.html">About Us</a></li>
+                                            <li><a href="blog-post.html">Blog Post</a></li>
+                                            <li><a href="receipe-post.html">Receipe Post</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="elements.html">Elements</a></li>
+                                            <li><a href="#">Dropdown</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="index.html">Home</a></li>
+                                                    <li><a href="about.html">About Us</a></li>
+                                                    <li><a href="blog-post.html">Blog Post</a></li>
+                                                    <li><a href="receipe-post.html">Receipe Post</a></li>
+                                                    <li><a href="contact.html">Contact</a></li>
+                                                    <li><a href="elements.html">Elements</a></li>
+                                                    <li><a href="#">Dropdown</a>
+                                                        <ul class="dropdown">
+                                                            <li><a href="index.html">Home</a></li>
+                                                            <li><a href="about.html">About Us</a></li>
+                                                            <li><a href="blog-post.html">Blog Post</a></li>
+                                                            <li><a href="receipe-post.html">Receipe Post</a></li>
+                                                            <li><a href="contact.html">Contact</a></li>
+                                                            <li><a href="elements.html">Elements</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Mega Menu</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">Catagory</li>
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="blog-post.html">Blog Post</a></li>
+                                                <li><a href="receipe-post.html">Receipe Post</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">Catagory</li>
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="blog-post.html">Blog Post</a></li>
+                                                <li><a href="receipe-post.html">Receipe Post</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">Catagory</li>
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="blog-post.html">Blog Post</a></li>
+                                                <li><a href="receipe-post.html">Receipe Post</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="elements.html">Elements</a></li>
+                                            </ul>
+                                            <div class="single-mega cn-col-4">
+                                                <div class="receipe-slider owl-carousel">
+                                                    <a href="#"><img src="assets/img/bg-img/bg1.jpg" alt=""></a>
+                                                    <a href="#"><img src="assets/img/bg-img/bg6.jpg" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="receipe-post.html">Receipies</a></li>
+                                    <li><a href="receipe-post.html">4 Vegans</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                <!-- Newsletter Form -->
+                                <div class="search-btn">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+   
+
+   <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="../assets/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="../assets/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="../assets/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="../assets/js/active.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+    <main id="spapp" role="main">
+        <section id="about"></section>
+        <section id="contact"></section>
+        <section id="blog-post"><h1>Datatable</h1></section>
+        <section id="elements"><h1>Example 1</h1></section>
+        <section id="receipe-post"><h1>Example 2</h1></section>
+        
+    </main>
+
+    <!-- Button for adding user -->
+    <button         
+    type="button"
+    class="btn btn-info btn-lg"
+    data-toggle="modal"
+    data-target="#addUserModal"
+    >
+    Add User
+    </button>
+
+    <!-- Table -->
+    <table id = "users">
+        <div class = "spinner-border" role = "status">
+            <span class = "sr-only">Loading...</span>
+        </div>
+    </table>
+
+    <!-- Add Modal -->
+    <div class="modal fade" id="addUserModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <div class="modal-content" id="addUserModal">
+            <form id="addUserForm">
+              <div class="modal-header">
+                <h4 class="modal-title">New User</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="firstName">First Name:</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="lastName">Last Name:</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="age">Age:</label>
+                  <input type="number" id="age" name="age" class="form-control" />
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" />
+                  </div>
+                <div>
+                  <label for="password">Password:</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div class="error"><span></span></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  id="close_button"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+              <div id="messageBox1"><ul></ul></div>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+  <!-- Delete modal -->
+  <div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <input id = "user_id" name = "user_id" hidden/>
+        <div class="modal-body" id = "delete-user-body">
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" onclick = "deleteUser()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+<div class="modal fade" id="editUserModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content" id="editUserModal">
+        <div class="spinner-border" id="editModalSpinner" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <form id="editUserForm">
+          <div class="modal-header">
+            <h4 class="modal-title">Edit User</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <input id="edit_user_id" name="edit_user_id" hidden />
+              <label for="firstName">First Name:</label>
+              <input
+                type="text"
+                id="edit_first_name"
+                name="firstName"
+                required
+                class="form-control"
+              />
+            </div>
+            <div>
+              <label for="lastName">Last Name:</label>
+              <input
+                type="text"
+                id="edit_last_name"
+                name="lastName"
+                class="form-control"
+              />
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input
+                  type="number"
+                  id="edit_age"
+                  name="age"
+                  class="form-control"
+                />
+              </div>
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="edit_email"
+                name="email"
+                class="form-control"
+              />
+            </div>
+            <div>
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                id="edit_password"
+                name="password"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="error"><span></span></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-default"
+              id="close_button"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" onclick="editUser()" class="btn btn-success">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+</body>
+<script>
+// alert("Hello");
+// hello();
+
+/*
+let list = '<ul>';   
+for (var i = 0; i < cars.length; i++) {
+    list = list +  '<li>' + cars[i] + '</li>';
+}
+list = list + '</ul>';
+document.getElementById("cars").innerHTML = list;
+*/
+
+$("p").click(function() {   // will hide all paragraphs when clicked (jquery)
+  $(this).hide();
+});
+
+
+
+/*
+
+ AJAX reuqest to get all users from db
+
+*/ 
+
+    console.log("next")
+
+    getUsers();
+
+    function getUsers() {
+   $.get("../rest/users", function(data) {
+    var html = "";
+        for (var i = 0; i < data.length; i++) {
+        html = html + "<tr>" + 
+                "<td>" + data[i].firstName + "</td>" + 
+                "<td>" + data[i].lastName + "</td>" +
+                "<td>" + data[i].age + "</td>" +
+                "<td>" + data[i].email + "</td>" +
+                "<td>" + data[i].password + "</td>" +
+                "<td><button class = 'btn btn-info' onclick = 'showEditDialog("+ data[i].id +")'>Edit User</button></td>" + 
+                "<td><button class = 'btn btn-danger' onclick = 'openConfirmationDialog("+ data[i].id +")'>Delete User</button></td>" + 
+                "</tr>";
+        }
+        $("#users").html(html);
+        console.log(data)
+   });
+
+}
+
+   function openConfirmationDialog(id) {
+        $("#deleteUserModal").modal("show");
+        $("#delete-user-body").html("Do you want to delete user with id = " + id);
+        $("#user_id").val(id);
+   }
+
+   function deleteUser() {
+    $.ajax({
+        'url': '../rest/user/' + $("#user_id").val(),
+        'type': 'DELETE',
+        success: function(response) {
+            console.log(response);
+            $("#deleteUserModal").modal('hide');
+            toastr.success(response.message);
+            getUsers();
+            //alert('deleted')
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrow) {
+            console.log("Error: " +  errorThrow);
+        },
+    });
+  }
+
+    function showEditDialog(id) {        // Puts the data from backend in the form 
+        $.get("../rest/user/" + id, function (data) {
+
+        $("#edit_first_name").val(data.firstName);
+        $("#edit_last_name").val(data.lastName);
+        $("#edit_email").val(data.email);
+        $("#edit_password").val(data.password);
+        $("#edit_user_id").val(data.id); 
+        $("#edit_age").val(data.age); 
+
+        $("#editUserModal").modal("show");
+
+    });
+    }
+
+    function editUser() {
+        $("#editUserForm").validate({
+      submitHandler: function (form, validator) {
+        data = {
+          firstName: $("#edit_first_name").val(),
+          lastName: $("#edit_last_name").val(),
+          email: $("#edit_email").val(),
+          password: $("#edit_password").val(),
+          age: $("#edit_age").val(),
+        };
+        $.ajax({
+          url: "../rest/user/" + $("#edit_user_id").val(),
+          type: "PUT",
+          data: JSON.stringify(data),
+          contentType: "application/json",
+          dataType: "json",
+          success: function (result) {
+            toastr.success("User has been updated successfully");
+            $("#editUserModal").modal("toggle");
+            getUsers();
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            toastr.error("Error! User has not been updated.");
+          },
+        });
+      },
+    });
+    }
+
+    $("#addUserForm").validate({    // Edit the add user form
+    focusCleanup: true,
+    errorElement: "em",
+    rules: {
+      firstName: "required",
+      lastName: "required",
+      password: {
+        required: true,
+        minlength: 2,
+        maxlength: 10,
+      },
+    },
+    messages: {
+      firstName: "First name field is required",
+      lastName: "Last name field is required",
+      email: "Enter a valid email",
+      password: {
+        minlength: "Password must be at least 2 characters long",
+      },
+    },
+    highlight: function (element, errorClass) {
+      $(element).fadeOut(function () {
+        $(element).fadeIn();
+      });
+    },
+    errorContainer: "#messageBox1",
+    errorLabelContainer: "#messageBox1 ul",
+    wrapper: "li",
+    submitHandler: function (form, validator) {
+      $.post("../rest/user", $("#addUserForm").serialize())   // This collects data from the form
+        .done(function () {
+          toastr.success("User added");
+          $("#addUserModal").modal("toggle");
+          getUsers();
+          form.reset();
+        })
+        .fail(function () {
+          toastr.error("User not added");
+        });
+    },
+    invalidHandler: function (event, validator) {
+      var errors = validator.numberOfInvalids();
+      toastr.error("Error");
+      if (errors) {
+        var message =
+          errors == 1
+            ? "You missed 1 field."
+            : "You missed " + errors + " fields.";
+        $("div.error span").html(message);
+        $("div.error").show();
+      } else {
+        $("div.error").hide();
+      }
+    },
+  });
+
+
+</script>
+</html>
